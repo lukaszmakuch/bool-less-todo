@@ -205,6 +205,10 @@ const main = {
         }
       </ul>
       {res.Navigation.UI}
+      <p class="footer">
+        This is an example of a To-Do application implemented <b>without&nbsp;boolean&nbsp;values</b>&nbsp;and&nbsp;<b>without&nbsp;variables</b>.<br/>
+        It's build using <a href="https://rosmaro.js.org" target="_blank">visual automata-based programming</a>.
+      </p>
     </div>
 };
 

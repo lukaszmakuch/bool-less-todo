@@ -47,3 +47,18 @@ body {
   background-color: #33909f;
   color: #fff;
 }
+
+.footer, .footer a {
+  color: #aaa;
+}
+
+.footer {
+  margin-left: 0.5em;
+  margin-top: 2em;
+  line-height: 1.5em;
+  font-size: 0.75em;
+}
+
+.footer a {
+  text-decoration: underline;
+}
