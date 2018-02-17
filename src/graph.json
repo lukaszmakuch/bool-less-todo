@@ -1,0 +1,138 @@
+{
+  "NewItemFormView": {
+    "type": "leaf"
+  },
+  "NewItemForm": {
+    "type": "graph",
+    "nodes": {
+      "View": "NewItemFormView"
+    },
+    "arrows": {
+      "View": {
+        "typed": {
+          "target": "View",
+          "entryPoint": "start"
+        },
+        "item added": {
+          "target": "View",
+          "entryPoint": "start"
+        }
+      }
+    },
+    "entryPoints": {
+      "start": {
+        "target": "View",
+        "entryPoint": "start"
+      }
+    }
+  },
+  "DoneItem": {
+    "type": "leaf"
+  },
+  "UndoneItem": {
+    "type": "leaf"
+  },
+  "Item": {
+    "type": "graph",
+    "nodes": {
+      "DoneItem": "DoneItem",
+      "UndoneItem": "UndoneItem"
+    },
+    "arrows": {
+      "UndoneItem": {
+        "clicked": {
+          "target": "DoneItem",
+          "entryPoint": "start"
+        }
+      },
+      "DoneItem": {
+        "clicked": {
+          "target": "UndoneItem",
+          "entryPoint": "start"
+        }
+      }
+    },
+    "entryPoints": {
+      "start": {
+        "target": "UndoneItem",
+        "entryPoint": "start"
+      }
+    }
+  },
+  "Items": {
+    "type": "dynamicComposite",
+    "nodeTemplate": "Item"
+  },
+  "NavigationAll": {
+    "type": "leaf"
+  },
+  "NavigationDone": {
+    "type": "leaf"
+  },
+  "NavigationUndone": {
+    "type": "leaf"
+  },
+  "NavigationView": {
+    "type": "graph",
+    "nodes": {
+      "All": "NavigationAll",
+      "Done": "NavigationDone",
+      "Undone": "NavigationUndone"
+    },
+    "arrows": {},
+    "entryPoints": {
+      "start": {
+        "target": "All",
+        "entryPoint": "start"
+      },
+      "all": {
+        "target": "All",
+        "entryPoint": "start"
+      },
+      "undone": {
+        "target": "Undone",
+        "entryPoint": "start"
+      },
+      "done": {
+        "target": "Done",
+        "entryPoint": "start"
+      }
+    }
+  },
+  "Navigation": {
+    "type": "graph",
+    "nodes": {
+      "View": "NavigationView"
+    },
+    "arrows": {
+      "View": {
+        "navigating to all": {
+          "target": "View",
+          "entryPoint": "all"
+        },
+        "navigating to undone": {
+          "target": "View",
+          "entryPoint": "undone"
+        },
+        "navigating to done": {
+          "target": "View",
+          "entryPoint": "done"
+        }
+      }
+    },
+    "entryPoints": {
+      "start": {
+        "target": "View",
+        "entryPoint": "start"
+      }
+    }
+  },
+  "main": {
+    "type": "composite",
+    "nodes": {
+      "NewItemForm": "NewItemForm",
+      "Items": "Items",
+      "Navigation": "Navigation"
+    }
+  }
+}
