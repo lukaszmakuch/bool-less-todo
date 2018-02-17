@@ -195,7 +195,7 @@ const main = {
   afterRender: ({res}) => 
     <div className="container">
       {res.NewItemForm}
-      <ul class="todos">
+      <ul className="todos">
         {
           // Navigation provides a function which 
           // given all items (from the *Items* dynamic composite) 
@@ -205,7 +205,7 @@ const main = {
         }
       </ul>
       {res.Navigation.UI}
-      <p class="footer">
+      <p className="footer">
         This is an example of a To-Do application implemented <b>without&nbsp;boolean&nbsp;values</b>&nbsp;and&nbsp;<b>without&nbsp;variables</b>.<br/>
         It's build using <a href="https://rosmaro.js.org">visual automata-based programming</a>.
       </p>

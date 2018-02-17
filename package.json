@@ -11,8 +11,8 @@
     "react-dom": "^16.2.0",
     "react-scripts": "1.1.1",
     "rosmaro": "^0.7.1",
-    "rosmaro-in-memory-storage": "^1.1.0",
-    "rosmaro-process-wide-lock": "^1.1.0",
+    "rosmaro-in-memory-storage": "^1.2.0",
+    "rosmaro-process-wide-lock": "^1.2.0",
     "rosmaro-react": "0.0.1"
   },
   "scripts": {
