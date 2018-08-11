@@ -1,19 +1,22 @@
 {
   "name": "bool-less-todo",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "homepage": "https://lukaszmakuch.github.io/bool-less-todo",
   "private": true,
   "dependencies": {
-    "gh-pages": "^1.1.0",
+    "gh-pages": "^1.2.0",
     "ramda": "^0.25.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-redux": "^5.0.7",
     "react-scripts": "1.1.0",
-    "rosmaro": "^0.7.1",
-    "rosmaro-in-memory-storage": "^1.2.0",
-    "rosmaro-process-wide-lock": "^1.2.0",
-    "rosmaro-react": "0.0.1"
+    "redux": "^4.0.0",
+    "redux-devtools-extension": "^2.13.5",
+    "rosmaro": "^0.8.1",
+    "rosmaro-binding-utils": "0.0.5",
+    "rosmaro-react": "0.0.6",
+    "rosmaro-redux": "0.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -21,6 +24,10 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "bindings:build": "npx rosmaro-tools bindings:build src/bindings"
+  },
+  "devDependencies": {
+    "rosmaro-tools": "0.0.3"
   }
 }

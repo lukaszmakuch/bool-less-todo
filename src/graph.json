@@ -61,7 +61,7 @@
   },
   "Items": {
     "type": "dynamicComposite",
-    "nodeTemplate": "Item"
+    "child": "Item"
   },
   "NavigationAll": {
     "type": "leaf"
